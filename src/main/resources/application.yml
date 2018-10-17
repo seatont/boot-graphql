@@ -1,0 +1,25 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    tools:
+      schemaLocationPattern: "**/*.graphqls"
+      introspectionEnabled: true
+
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+    subscriptions: /subscriptions
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+
